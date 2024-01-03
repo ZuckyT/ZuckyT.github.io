@@ -136,3 +136,49 @@ p, a {
   display: block; /* This will allow us to center the image */
   margin: auto; /* This will center the image */
 }
+
+.social-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #007BFF;
+}
+
+.about-me-content {
+  display: flex; /* This makes the elements inside the div display as a row */
+  align-items: center; /* This vertically centers the elements */
+  justify-content: space-between; /* This adds space between the elements */
+  margin-bottom: 20px; /* This adds some space below the elements */
+}
+.indexImgContainer {
+  display: flex; /* This makes the images display as a row */
+  justify-content: flex-start; /* This aligns the images to the left */
+}
+
+.indexImgContainer img {
+  margin-right: 20px; /* This adds some space to the right of each image */
+}
+
+img {
+  border-radius: 10px; /* This rounds the corners of the images */
+}
+
+body {
+  font-family: Arial, sans-serif; /* This changes the font to a sans-serif font */
+  background-color: #F5F5F5; /* This changes the background color to a light gray */
+  color: #333; /* This changes the text color to a dark gray */
+}
+
+.container {
+  padding: 20px; /* This adds some space inside the containers */
+  background-color: white; /* This changes the background color of the containers to white */
+  border-radius: 10px; /* This rounds the corners of the containers */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow to the containers */
+}
+
+a, button {
+  transition: background-color 0.3s ease, color 0.3s ease; /* This adds a transition effect to the links and buttons */
+}
