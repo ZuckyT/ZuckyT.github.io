@@ -3,6 +3,15 @@
     <title>Bryn Morgan's Personal Site</title>
     <link rel="stylesheet" href="style.css">
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C8FCRJ9LCF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-C8FCRJ9LCF');
+  </script>
 
   <body>
     <!-- <h1 class="header">Bryn Morgan's Personal Site</h1> -->
@@ -32,8 +41,13 @@
           </div>
       </div>
       <div class="card">
-        <h2>Entry 2</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <button class="collapsible">Older Posts</button>
+        <div class="content">
+          <h2>Test</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <br>
+          <h2>Test 1</h2>
+        </div>
       </div>
       </div>
       <div class="rightColumn">
@@ -70,6 +84,21 @@
       function myFunction() {
          var element = document.body;
          element.classList.toggle("dark-mode");
+      }
+
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } 
+        });
       }
       </script>
   </body>
