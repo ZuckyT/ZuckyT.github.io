@@ -186,6 +186,14 @@ body.dark-mode {
   background-color: #444;
 }
 
+.dark-mode .project-card {
+  background-color: #444;
+}
+
+.dark-mode .project-content-p {
+  color: #F5F5F5;
+}
+
 .dark-mode .footer {
   background-color: #444;
 }
@@ -289,4 +297,71 @@ input:checked + .slider:before {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
+}
+
+
+
+/* Project Card Container */
+.project-card {
+  display: flex;
+  flex-direction: row; /* Place image and text side by side */
+  align-items: center; /* Align items vertically */
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Section */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.project-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.project-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Image Section */
+.project-image {
+  flex-shrink: 0; /* Prevent the image container from shrinking */
+  max-width: 30%; /* Limit the image container width */
+}
+
+.project-image img {
+  max-height: 100%; /* Ensure the image does not exceed the height of its container */
+  max-width: 100%; /* Ensure the image does not exceed the width of its container */
+  height: auto; /* Maintain aspect ratio */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the container without cropping */
+  display: block; /* Center the image */
+  margin: auto; /* Center the image horizontally and vertically */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 800px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content {
+    flex: 1; /* Allow the text content to take up remaining space */
+  }
 }
